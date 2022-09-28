@@ -5,7 +5,7 @@ import { selectFeaturedPromotion } from "../promotions/promotionsSlice";
 
 const DisplayList = () => {
    const items = [selectFeaturedCampsite(), selectFeaturedPromotion()];
-
+   //left is featuredCampsite, the right is featuredPromotion, so order matters.
    return (
       <Row>
          {items.map((item, idx) => {
