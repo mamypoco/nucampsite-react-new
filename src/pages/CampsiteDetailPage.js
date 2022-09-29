@@ -4,7 +4,6 @@ import { selectCampsiteById } from "../features/campsites/campsitesSlice";
 import CampsiteDetail from "../features/campsites/CampsiteDetail";
 import CommentsList from "../features/comments/CommentsList";
 import SubHeader from "../components/SubHeader";
-import { current } from "@reduxjs/toolkit";
 
 const CampsiteDetailPage = () => {
    const { campsiteId } = useParams();

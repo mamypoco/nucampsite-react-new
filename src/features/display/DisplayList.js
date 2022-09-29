@@ -2,10 +2,15 @@ import { Col, Row } from "reactstrap";
 import DisplayCard from "./DisplayCard";
 import { selectFeaturedCampsite } from "../campsites/campsitesSlice";
 import { selectFeaturedPromotion } from "../promotions/promotionsSlice";
+import { selectFeaturedPartner } from "../partners/partnersSlice";
 
 const DisplayList = () => {
-   const items = [selectFeaturedCampsite(), selectFeaturedPromotion()];
-   //left is featuredCampsite, the right is featuredPromotion, so order matters.
+   const items = [
+      selectFeaturedCampsite(),
+      selectFeaturedPromotion(),
+      selectFeaturedPartner(),
+   ];
+   //order matters: left is featuredCampsite, the right is featuredPromotion.
    return (
       <Row>
          {items.map((item, idx) => {
