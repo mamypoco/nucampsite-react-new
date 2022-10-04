@@ -16,7 +16,7 @@ const DisplayList = () => {
          {items.map((item, idx) => {
             return (
                item && (
-                  //without this condition, we will get error when ther is no featured campsite.
+                  //without this condition, we will get error when there is no featured campsite.
                   <Col md className="m-1" key={idx}>
                      <AnimatedDisplayCard item={item} />
                   </Col>
